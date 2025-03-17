@@ -6,11 +6,11 @@
     --light: #fff;
     --dark: #000;
     --danger: #00000;
-    --primary: #2D31FA;
-    --second: #051367;
-    --second-light: #00073a;
-    --third: #5D8BF4;
-    --true: #52e5ff;
+    --primary: #A0A0A0;
+    --second: #6B6B6B;
+    --second-light: #3A3A3A;
+    --third: #D3D3D3;
+    --true: #E0E0E0;
   }
   
   body{
