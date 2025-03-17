@@ -1,6 +1,6 @@
 // typing text hero
 const typed = new Typed(".typing-text", {
-  strings: ["A Beginner Programmer.", "A Web Developer.", "A Gamer.", "Hmmm..", "..."],
+  strings: ["A Beginner Programmer.", "...", "...", "Hmmm..", "..."],
   loop: true,
   typeSpeed: 75,
   backSpeed: 25,
