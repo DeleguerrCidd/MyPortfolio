@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#000000">
+  <title>Cidreck Deleguer</title>
+  <meta name="description" content="Cidreck Deleguer - digital contact card. Save contact, payment details and more.">
+  <link rel="canonical" href="https://cidportfolio.xyz/card/">
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Cidreck Deleguer">
+  <meta property="og:title" content="Cidreck Deleguer">
+  <meta property="og:description" content="Digital contact card. Save contact, payment details and more.">
+  <meta property="og:url" content="https://cidportfolio.xyz/card/">
+  <meta property="og:image" content="https://cidportfolio.xyz/card/images/avatar/og-preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cidreck Deleguer">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cidreck Deleguer">
+  <meta name="twitter:description" content="Digital contact card. Save contact, payment details and more.">
+  <meta name="twitter:image" content="https://cidportfolio.xyz/card/images/avatar/og-preview.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem('theme');
+        if (t === 'light' || t === 'dark') { document.documentElement.setAttribute('data-theme', t); }
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode"><i class="fa-solid fa-sun" aria-hidden="true"></i></button>
+
+  <main class="wrap">
+
+    
+    <header class="profile">
+      <div class="avatar">
+        <img src="images/avatar/avatar.jpg" alt="Cidreck Deleguer" width="128" height="128">
+      </div>
+      <h1>Cidreck Deleguer</h1>
+      <a class="save" href="contact.vcf" download="Cidreck-Deleguer.vcf">
+        <i class="fa-solid fa-user-plus" aria-hidden="true"></i>
+        Save contact
+      </a>
+    </header>
+
+    
+    <section class="music-section" aria-label="Favorite song">
+      <button class="music-bar" id="music-toggle" type="button" aria-expanded="false" aria-controls="spotify-panel">
+        <span class="music-cover"><img src="https://image-cdn-ak.spotifycdn.com/image/ab67616d00001e0214b8c2880e47f9af7ddfba6a" alt="Favorite Vice album cover"></span>
+        <span class="music-info">
+          <span class="music-title">Favorite Vice</span>
+          <span class="music-artist">Arthur Nery</span>
+        </span>
+        <span class="equalizer" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+        <span class="music-play" aria-hidden="true"><i class="fa-solid fa-play"></i></span>
+      </button>
+      <div class="spotify-panel" id="spotify-panel" hidden>
+        <iframe
+          title="Spotify player: Favorite Vice by Arthur Nery"
+          src="https://open.spotify.com/embed/track/72i1Mv68WTNNRYjEbJOkxC?utm_source=generator&theme=0"
+          width="100%" height="264" frameborder="0"
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"></iframe>
+      </div>
+    </section>
+
+    
+    <section class="card" id="education" aria-labelledby="edu-title">
+      <h2 class="label" id="edu-title">Education</h2>
+      <div class="edu">
+        <span class="edu-icon" aria-hidden="true"><i class="fa-solid fa-graduation-cap"></i><img class="logo" src="images/avatar/university.png" data-base="images/avatar/university" data-logo alt=""></span>
+        <div>
+          <p class="title">University of Mindanao</p>
+          <div class="tags">
+            <span class="tag">College</span>
+            <span class="tag">BSEE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section id="games" aria-labelledby="games-title">
+      <h2 class="label outside" id="games-title">Games</h2>
+
+      <div class="card game">
+        <div class="game-top">
+          <span class="icon plain" aria-hidden="true"><i class="fa-solid fa-gamepad"></i></span>
+          <div class="grow">
+            <p class="title">Mobile Legends</p>
+            <p class="mono">763693291 (10435)</p>
+          </div>
+          <button class="btn small" type="button" data-copy="763693291 (10435)">Copy</button>
+        </div>
+      </div>
+
+      <p class="hint center">Tap Copy, then paste it in the game's friend search.</p>
+    </section>
+
+    
+    <nav class="links" id="links" aria-label="Social and contact links">
+      <a class="card link" href="https://www.facebook.com/mr.ciddd" target="_blank" rel="noopener">
+        <span class="icon round" aria-hidden="true">
+          <i class="fa-brands fa-facebook-f"></i>
+        </span>
+        <span class="grow">
+          <span class="title">Facebook</span>
+          <span class="sub">facebook.com/mr.ciddd</span>
+        </span>
+        <i class="fa-solid fa-arrow-up arrow" aria-hidden="true"></i>
+      </a>
+
+      <a class="card link" href="https://instagram.com/whattheycid" target="_blank" rel="noopener">
+        <span class="icon round" aria-hidden="true">
+          <i class="fa-brands fa-instagram"></i>
+        </span>
+        <span class="grow">
+          <span class="title">Instagram</span>
+          <span class="sub">instagram.com/whattheycid</span>
+        </span>
+        <i class="fa-solid fa-arrow-up arrow" aria-hidden="true"></i>
+      </a>
+
+      <a class="card link" href="mailto:deleguercidd@gmail.com">
+        <span class="icon round" aria-hidden="true">
+          <i class="fa-regular fa-envelope"></i>
+        </span>
+        <span class="grow">
+          <span class="title">Email</span>
+          <span class="sub">deleguercidd@gmail.com</span>
+        </span>
+        <i class="fa-solid fa-arrow-up arrow" aria-hidden="true"></i>
+      </a>
+    </nav>
+
+    
+    <section class="card" id="payments" aria-labelledby="pay-title">
+      <h2 class="label" id="pay-title">Payments</h2>
+      <div class="method">
+        <div class="pay-head">
+          <span class="icon gcash" aria-hidden="true">G<img class="logo" src="images/payments/gcash.jpg" data-base="images/payments/gcash" data-logo alt=""></span>
+          <div>
+            <p class="title">GCash</p>
+            <p class="sub">Cidreck D.</p>
+          </div>
+        </div>
+        <button class="number" type="button" data-num="MDk1MDYxMDA0MDU=" aria-label="Reveal GCash number">
+          <span class="num">•••••••••••</span>
+          <span class="copy-label">Reveal</span>
+        </button>
+        <button class="btn block" data-qr="qr-gcash" type="button" aria-expanded="false" aria-controls="qr-gcash">Show QR</button>
+        <div class="qr-wrap" id="qr-gcash" hidden>
+          <div class="qr">
+            <img src="images/payments/gcash-qr.jpeg" data-base="images/payments/gcash-qr" alt="GCash QR code" loading="lazy">
+          </div>
+          <a class="qr-download" data-qr-download href="images/payments/gcash-qr.jpeg" download="GCash-QR-Cidreck-D.jpg">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download this QR
+          </a>
+        </div>
+      </div>
+      <div class="method">
+        <div class="pay-head">
+          <span class="icon maribank" aria-hidden="true">M<img class="logo" src="images/payments/maribank.jpg" data-base="images/payments/maribank" data-logo alt=""></span>
+          <div>
+            <p class="title">Maribank</p>
+            <p class="sub">Cidreck D.</p>
+          </div>
+        </div>
+        <button class="number" type="button" data-num="MDk1MDYxMDA0MDU=" aria-label="Reveal Maribank number">
+          <span class="num">•••••••••••</span>
+          <span class="copy-label">Reveal</span>
+        </button>
+        <button class="btn block" data-qr="qr-maribank" type="button" aria-expanded="false" aria-controls="qr-maribank">Show QR</button>
+        <div class="qr-wrap" id="qr-maribank" hidden>
+          <div class="qr">
+            <img src="images/payments/maribank-qr.jpeg" data-base="images/payments/maribank-qr" alt="Maribank QR code" loading="lazy">
+          </div>
+          <a class="qr-download" data-qr-download href="images/payments/maribank-qr.jpeg" download="Maribank-QR-Cidreck-D.jpg">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download this QR
+          </a>
+        </div>
+      </div>
+      <div class="method">
+        <div class="pay-head">
+          <span class="icon maya" aria-hidden="true">M<img class="logo" src="images/payments/paymaya.jpg" data-base="images/payments/paymaya" data-logo alt=""></span>
+          <div>
+            <p class="title">PayMaya</p>
+            <p class="sub">Cidreck D.</p>
+          </div>
+        </div>
+        <button class="number" type="button" data-num="MDk1MDYxMDA0MDU=" aria-label="Reveal PayMaya number">
+          <span class="num">•••••••••••</span>
+          <span class="copy-label">Reveal</span>
+        </button>
+        <button class="btn block" data-qr="qr-maya" type="button" aria-expanded="false" aria-controls="qr-maya">Show QR</button>
+        <div class="qr-wrap" id="qr-maya" hidden>
+          <div class="qr">
+            <img src="images/payments/paymaya-qr.jpeg" data-base="images/payments/paymaya-qr" alt="PayMaya QR code" loading="lazy">
+          </div>
+          <a class="qr-download" data-qr-download href="images/payments/paymaya-qr.jpeg" download="PayMaya-QR-Cidreck-D.jpg">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download this QR
+          </a>
+        </div>
+      </div>
+      <div class="method">
+        <div class="pay-head">
+          <span class="icon gotyme" aria-hidden="true">GT<img class="logo" src="images/payments/gotyme.jpg" data-base="images/payments/gotyme" data-logo alt=""></span>
+          <div>
+            <p class="title">GoTyme</p>
+            <p class="sub">Cidreck D.</p>
+          </div>
+        </div>
+        <button class="number" type="button" data-num="MDExNTE1ODQzODk5" aria-label="Reveal GoTyme account number">
+          <span class="num">••••••••••••</span>
+          <span class="copy-label">Reveal</span>
+        </button>
+        <button class="btn block" data-qr="qr-gotyme" type="button" aria-expanded="false" aria-controls="qr-gotyme">Show QR</button>
+        <div class="qr-wrap" id="qr-gotyme" hidden>
+          <div class="qr">
+            <img src="images/payments/gotyme-qr.jpeg" data-base="images/payments/gotyme-qr" alt="GoTyme QR code" loading="lazy">
+          </div>
+          <a class="qr-download" data-qr-download href="images/payments/gotyme-qr.jpeg" download="GoTyme-QR-Cidreck-D.jpg">
+            <i class="fa-solid fa-download" aria-hidden="true"></i> Download this QR
+          </a>
+        </div>
+      </div>
+
+      <p class="hint">Only send money to people you know. Check the account name before you pay.</p>
+    </section>
+
+    <section class="card" id="paynote" aria-labelledby="paynote-title">
+      <h2 class="label" id="paynote-title">Payment note</h2>
+      <p class="hint note-hint">Paid already or about to? Build a quick message so I know it's you.</p>
+
+      <div class="field">
+        <label for="pn-amount">Amount</label>
+        <div class="input-prefix">
+          <span aria-hidden="true">₱</span>
+          <input id="pn-amount" type="text" inputmode="decimal" autocomplete="off" placeholder="0.00" maxlength="12">
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pn-method">Sent via</label>
+        <select id="pn-method">
+          <option>GCash</option>
+          <option>Maya</option>
+          <option>GoTyme</option>
+          <option>Maribank</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="pn-name">Your name <span class="opt">(optional)</span></label>
+        <input id="pn-name" type="text" autocomplete="name" maxlength="40" placeholder="Juan Dela Cruz">
+      </div>
+
+      <div class="field">
+        <label for="pn-reason">What it's for <span class="opt">(optional)</span></label>
+        <input id="pn-reason" type="text" maxlength="60" placeholder="e.g. lunch, commission">
+      </div>
+
+      <p class="note-preview" id="pn-preview" aria-live="polite">Enter an amount to build your message.</p>
+
+      <div class="note-actions">
+        <button class="btn block" id="pn-copy" type="button" disabled>Copy message</button>
+        <button class="btn block" id="pn-messenger" type="button" disabled>Messenger</button>
+      </div>
+      <p class="hint center">This only prepares a message. It doesn't send money.</p>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
