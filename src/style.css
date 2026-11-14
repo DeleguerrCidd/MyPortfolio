@@ -60,23 +60,38 @@
   transition: none !important;
 }
 
-/* On phones, the expanded links sit on a solid gray panel. */
+/* Smooth mobile menu: keep the gray panel, but animate its opening/closing. */
 @media screen and (max-width: 991.98px) {
   .navbar-menu-open,
   .navbar-menu-open .container {
     background-color: var(--Nm) !important;
   }
 
-  .navbar-collapse.show,
-  .navbar-collapse.collapsing {
+  .navbar-collapse,
+  .navbar-collapse.collapsing,
+  .navbar-collapse.show {
     background-color: var(--Nm) !important;
-    transition: none !important;
-    -webkit-transition: none !important;
+    -webkit-transition: height 0.35s ease, opacity 0.25s ease !important;
+    transition: height 0.35s ease, opacity 0.25s ease !important;
+    overflow: hidden;
   }
 
-  /* Remove Bootstrap's vertical sliding effect when opening/closing. */
-  .navbar-collapse,
-  .navbar-collapse.collapsing {
+  /* Fade the menu links in gently while Bootstrap animates the panel height. */
+  .navbar-collapse .nav-link {
+    opacity: 0;
+    transform: translateY(-5px);
+    -webkit-transition: opacity 0.22s ease, transform 0.22s ease !important;
+    transition: opacity 0.22s ease, transform 0.22s ease !important;
+  }
+
+  .navbar-collapse.show .nav-link {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Keep the hamburger itself as three steady bars; only the menu animates. */
+  .navbar-toggler,
+  .navbar-toggler .toggler-icon {
     transition: none !important;
     -webkit-transition: none !important;
   }

@@ -30,6 +30,12 @@ function updateNavbarState() {
 window.addEventListener("scroll", updateNavbarState, { passive: true });
 
 if (navMenu) {
+  navMenu.addEventListener("show.bs.collapse", () => {
+    if (navBar) {
+      navBar.classList.add("navbar-color", "navbar-menu-open");
+      navBar.classList.remove("bg-transparent");
+    }
+  });
   navMenu.addEventListener("shown.bs.collapse", updateNavbarState);
   navMenu.addEventListener("hidden.bs.collapse", updateNavbarState);
 
