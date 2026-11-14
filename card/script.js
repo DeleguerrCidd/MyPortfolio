@@ -107,7 +107,7 @@
       if (!pnMessage) { return; }
       copyText(pnMessage).then(function () {
         showToast('Message copied. Paste it in Messenger.');
-        window.open('https://m.me/mr.ciddd', '_blank', 'noopener');
+        window.open('https://www.messenger.com/t/mr.ciddd', '_blank', 'noopener');
       });
     });
 
