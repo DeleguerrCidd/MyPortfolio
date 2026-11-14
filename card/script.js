@@ -84,7 +84,7 @@
         var money = '\u20B1' + amt.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         var name = pnName.value.trim();
         var reason = pnReason.value.trim();
-        pnMessage = 'Hi Cidreck, I just sent ' + money + ' via ' + pnMethod.value +
+        pnMessage = 'Hi Cid, I just sent ' + money + ' via ' + pnMethod.value +
           (reason ? ' for ' + reason : '') + '.' + (name ? ' - ' + name : '');
         pnPreview.textContent = pnMessage;
       }
