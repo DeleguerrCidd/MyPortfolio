@@ -32,7 +32,6 @@
     return Promise.resolve(fallbackCopy(text));
   }
 
-  // Copy buttons (games + GCash number)
   document.querySelectorAll('[data-copy]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       copyText(btn.getAttribute('data-copy')).then(function (ok) {
@@ -41,7 +40,17 @@
     });
   });
 
-  // Show / Hide QR (one toggle per payment method)
+  var musicToggle = document.getElementById('music-toggle');
+  var spotifyPanel = document.getElementById('spotify-panel');
+  if (musicToggle && spotifyPanel) {
+    musicToggle.addEventListener('click', function () {
+      var open = spotifyPanel.hasAttribute('hidden');
+      if (open) { spotifyPanel.removeAttribute('hidden'); }
+      else { spotifyPanel.setAttribute('hidden', ''); }
+      musicToggle.setAttribute('aria-expanded', String(open));
+    });
+  }
+
   document.querySelectorAll('[data-qr]').forEach(function (toggle) {
     var box = document.getElementById(toggle.getAttribute('data-qr'));
     toggle.addEventListener('click', function () {
@@ -52,8 +61,6 @@
     });
   });
 
-  // Bank logos and QR images: images/<bank>.png and images/<bank>-qr.png
-  // (png, jpg, jpeg or webp all work)
   var exts = ['png', 'jpg', 'jpeg', 'webp'];
   document.querySelectorAll('img[data-base]').forEach(function (img) {
     var i = 0;
