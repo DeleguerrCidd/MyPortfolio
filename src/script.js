@@ -12,16 +12,39 @@ $(".click-trigger").click(function () {
   $(".navbar-collapse").collapse("hide");
 });
 
-// automatic transparent navbar
-const navBar = document.getElementsByTagName("nav")[0];
-window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
-  if (window.scrollY > 1) {
-    navBar.classList.replace("bg-transparent", "navbar-color");
-  } else if (this.window.scrollY <= 0) {
-    navBar.classList.replace("navbar-color", "bg-transparent");
-  }
-});
+// Navbar background: transparent at the top, gray while scrolling or menu is open.
+const navBar = document.querySelector(".navbar");
+const navMenu = document.querySelector("#navbarNav");
+
+function updateNavbarState() {
+  if (!navBar) return;
+
+  const isScrolled = window.scrollY > 1;
+  const isMenuOpen = !!(navMenu && navMenu.classList.contains("show"));
+
+  navBar.classList.toggle("navbar-color", isScrolled || isMenuOpen);
+  navBar.classList.toggle("bg-transparent", !isScrolled && !isMenuOpen);
+  navBar.classList.toggle("navbar-menu-open", isMenuOpen);
+}
+
+window.addEventListener("scroll", updateNavbarState, { passive: true });
+
+if (navMenu) {
+  navMenu.addEventListener("shown.bs.collapse", updateNavbarState);
+  navMenu.addEventListener("hidden.bs.collapse", updateNavbarState);
+
+  // Close the mobile menu after choosing a navigation link.
+  navMenu.querySelectorAll(".nav-link").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.bootstrap && window.bootstrap.Collapse) {
+        const collapse = window.bootstrap.Collapse.getOrCreateInstance(navMenu);
+        collapse.hide();
+      }
+    });
+  });
+}
+
+updateNavbarState();
 
 // fetchData API
 async function fetchData(type = "Skils") {
