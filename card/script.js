@@ -84,11 +84,12 @@
         var money = '\u20B1' + amt.toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
         var name = pnName.value.trim();
         var reason = pnReason.value.trim();
-        pnMessage = 'Hi Cid, I just sent ' + money + ' via ' + pnMethod.value +
+        pnMessage = 'Hi Cidd, I just sent ' + money + ' via ' + pnMethod.value +
           (reason ? ' for ' + reason : '') + '.' + (name ? ' - ' + name : '');
         pnPreview.textContent = pnMessage;
       }
-      pnCopy.disabled = pnMessenger.disabled = !ok;
+      pnCopy.disabled = !ok;
+      pnMessenger.setAttribute('aria-disabled', ok ? 'false' : 'true');
     }
 
     [pnAmount, pnMethod, pnName, pnReason].forEach(function (el) {
@@ -103,12 +104,10 @@
       });
     });
 
-    pnMessenger.addEventListener('click', function () {
-      if (!pnMessage) { return; }
-      copyText(pnMessage).then(function () {
-        showToast('Message copied. Paste it in Messenger.');
-        window.open('https://www.messenger.com/t/mr.ciddd', '_blank', 'noopener');
-      });
+    pnMessenger.addEventListener('click', function (e) {
+      if (!pnMessage) { e.preventDefault(); return; }
+      copyText(pnMessage);
+      showToast('Message copied. Paste it in Messenger.');
     });
 
     pnBuild();
